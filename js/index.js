@@ -42,9 +42,8 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 customImg.src = "logo.png";
 
-let topText = document.querySelector('.cta-text h1');
-topText.textContent = "DOM Is Awesome";
-console.log(topText);
+let topText = document.querySelector('h1');
+topText.textContent = siteContent["cta"]["h1"];
 
 let header = document.getElementById("cta-img");
 header.setAttribute('src', siteContent["cta"]["img-src"])
@@ -53,4 +52,33 @@ customImg.src = "header-img.png";
 let midPage = document.getElementById("middle-img");
 midPage.setAttribute('src', siteContent["main-content"]["img-src"])
 customImg.src = "mid-page-accent.jpg";
+
+let nav = document.querySelector('nav');
+nav.style.color = "green";
+
+const navLinks = document.querySelectorAll ('nav a');
+navLinks[0].textContent = siteContent['nav']['nav-item-1'];
+navLinks[1].textContent = siteContent['nav']['nav-item-2'];
+navLinks[2].textContent = siteContent['nav']['nav-item-3'];
+navLinks[3].textContent = siteContent['nav']['nav-item-4'];
+navLinks[4].textContent = siteContent['nav']['nav-item-5'];
+navLinks[5].textContent = siteContent['nav']['nav-item-6'];
+
+const nav = document.querySelector('nav');
+const firstATag = document.createElement('a');
+const secondATag = document.createElement('a');
+const resourcesText = document.createTextNode('Resources');
+const extrasText = document.createTextNode('Extras');
+
+firstATag.appendChild(resourcesText);
+nav.appendChild(firstATag);
+
+secondATag.appendChild(extrasText);
+nav.appendChild(secondATag);
+
+const allNavLinks = document.querySelectorAll('nav a');
+
+allNavLinks.forEach((link) => {
+  link.style.color = 'green';
+})
 
