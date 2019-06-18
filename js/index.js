@@ -37,6 +37,26 @@ const siteContent = {
   },
 };
 
+const maincontent = document.querySelectorAll ('p');
+maincontent[0].textContent = siteContent['main-content']['features-content'];
+maincontent[1].textContent = siteContent['main-content']['about-content'];
+maincontent[2].textContent = siteContent['main-content']['services-content'];
+maincontent[3].textContent = siteContent['main-content']['product-content'];
+maincontent[4].textContent = siteContent['main-content']['vision-content'];
+maincontent[5].textContent = siteContent['contact']['contact-h4'];
+maincontent[6].textContent = siteContent['contact']['address'];
+maincontent[7].textContent = siteContent['contact']['phone'];
+maincontent[8].textContent = siteContent['contact']['email'];
+
+
+const h4sections = document.querySelectorAll ('h4');
+h4sections[0].textContent = siteContent['main-content']['features-h4'];
+h4sections[1].textContent = siteContent['main-content']['about-h4'];
+h4sections[2].textContent = siteContent['main-content']['services-h4'];
+h4sections[3].textContent = siteContent['main-content']['product-h4'];
+h4sections[4].textContent = siteContent['main-content']['vision-h4'];
+
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -74,7 +94,6 @@ secondATag.appendChild(extrasText);
 nav.appendChild(secondATag);
 
 const allNavLinks = document.querySelectorAll('nav a');
-
 allNavLinks.forEach((link) => {
   link.style.color = 'green';
 })
@@ -83,18 +102,18 @@ let buttonText = document.querySelector('button');
 buttonText.textContent = siteContent["cta"]["button"];
 
 
-let contacth4 = document.querySelector('contact-h4');
-contacth4.textContent = siteContent["contact"]["contact-h4"];
+// let contacth4 = document.querySelector('contact-h4');
+// contacth4.textContent = siteContent["contact"]["contact-h4"];
 
-let addy = document.querySelector('address');
-addy.textContent = siteContent["contact"]["address"];
+// let addy = document.querySelector('address');
+// addy.textContent = siteContent["contact"]["address"];
 
-let phoney = document.querySelector('phone');
-phoney.textContent = siteContent["contact"]["phone"];
+// let phoney = document.querySelector('phone');
+// phoney.textContent = siteContent["contact"]["phone"];
+ 
+// let mail = document.querySelector('email');
+// mail.textContent = siteContent["contact"]["email"];
 
-let mail = document.querySelector('email');
-mail.textContent = siteContent["contact"]["email"];
-
-let theBottom = document.querySelector("copyright");
+const theBottom = document.querySelector("footer p");
 theBottom.textContent = siteContent["footer"]["copyright"];
 
