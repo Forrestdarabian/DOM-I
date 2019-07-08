@@ -95,7 +95,7 @@ nav.appendChild(secondATag);
 
 const allNavLinks = document.querySelectorAll('nav a');
 allNavLinks.forEach((link) => {
-  link.style.color = 'green';
+  link.style.color = 'gray';
 })
 
 let buttonText = document.querySelector('button');
