@@ -1,19 +1,19 @@
-/* Timer */
 
-/* digit elements */
+
+/* elements for digits*/
 let msTensElement = document.getElementById('msTens');
 let msHundredsElement = document.getElementById('msHundreds');
 let secondOnesElement = document.getElementById('secondOnes');
 let secondTensElement = document.getElementById('secondTens');
 
-/* button elements */
+/* elements for buttons */
 let startButton = document.getElementById('startButton');
 let resetButton = document.getElementById('resetButton');
 
-/* time variables */
-let msTens = 0;
-let msHundreds = 0;
-let seconds = 0;
+/* variables for time */
+var msTens = 0;
+var msHundreds = 0;
+var seconds = 0;
 
 
 function timer() {
@@ -47,16 +47,16 @@ function timer() {
 
 /* event listeners */
 startButton.addEventListener('click', (event) => {
-    let clock = setInterval(timer, 10);
+    const clock = setInterval(timer, 10);
     startButton.disabled = true;
     resetButton.disabled = true;
 
-  })
+})
 
 resetButton.addEventListener('click', (event) => {
-    let msTens = 0;
-    let msHundreds = 0;
-    let seconds = 0;
+    var msTens = 0;
+    var msHundreds = 0;
+    var seconds = 0;
     msTensElement.innerHTML = msTens;
     msHundredsElement.innerHTML = msHundreds;
     secondOnesElement.innerHTML = seconds;
